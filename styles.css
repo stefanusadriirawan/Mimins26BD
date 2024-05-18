@@ -13,7 +13,7 @@
 
 body {
     font-family: 'Glacial Indifference', monospace;
-    background-color: #2b0133;
+    background-color: #7c746c;
     margin: 0;
     padding: 0;
     display: flex;
@@ -34,7 +34,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background: #fff;
+    background: #faf0d7;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
@@ -55,8 +55,8 @@ header h1 {
     padding: 20px;
     font-size: 1em;
     font-family: 'Glacial Indifference', monospace; /* Add this line */
-    background-color: #550748;
-    color: white;
+    background-color: #37271d;
+    color: #fbf1d8;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -64,7 +64,7 @@ header h1 {
 }
 
 .soundboard button:hover {
-    background-color: #a486a7;
+    background-color: #d0974f;
 }
 
 footer {
@@ -105,7 +105,7 @@ footer p {
 }
 
 .modal-content {
-    background-color: #ffffff;
+    background-color: #fbf1d8;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -155,14 +155,14 @@ audio {
     width: 100%;
     max-width: 400px;
     margin-top: 20px;
-    background-color: #ffffff; /* Background color of the audio player */
-    color: #fff; /* Text color */
+    background-color: #fbf1d8; /* Background color of the audio player */
+    color: #fbf1d8; /* Text color */
     border-radius: 8px;
     padding: 10px;
 }
 
 audio::-webkit-media-controls-panel {
-    background-color: #be5cae; /* Background color for controls */
+    background-color: #d0974f; /* Background color for controls */
 }
 
 audio::-webkit-media-controls-play-button,
@@ -170,7 +170,7 @@ audio::-webkit-media-controls-volume-slider,
 audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display {
-    color: #fff; /* Control color */
+    color: #fbf1d8; /* Control color */
 }
 
 /* Hide background audio element */
