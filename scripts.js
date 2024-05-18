@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
     const sounds = [
-        { name: "1ˢᵗ Phone", file: "Audio/Audio for mimin1 (enhanced-mastered).mp3" },
-        { name: "2ⁿᵈ Phone", file: "Audio/Audio for mimin2 (enhanced-mastered).mp3" },
-        { name: "3ʳᵈ Phone", file: "Audio/Persephone1.wav" },
-        { name: "4ᵗʰ Phone", file: "Audio/Persephone2.mp3" },
+        { name: "1st Phone", file: "Audio/Audio for mimin1 (enhanced-mastered).mp3" },
+        { name: "2nd Phone", file: "Audio/Audio for mimin2 (enhanced-mastered).mp3" },
+        { name: "3rd Phone", file: "Audio/Persephone1.wav" },
+        { name: "4th Phone", file: "Audio/Persephone2.mp3" },
     ];
 
     const soundboard = document.querySelector(".soundboard");
@@ -44,19 +44,19 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "block";
         audioPlayer.play();
 
-        if (sound.name === "3ʳᵈ Phone") {
+        if (sound.name === "3rd Phone") {
             customText.innerHTML = `
-                <p>My Dearest [Her Name],</p>
+                <p>My Dearest Mimin,</p>
                 <p>In the tapestry of my life, thou art the most radiant thread, filling my heart with boundless joy and love. Thy presence soothes my soul, like a gentle summer breeze, and thy laughter is the sweetest melody that echoes within me.</p>
                 <p>In thine eyes, I see the stars guiding me through the darkest nights, and in thy embrace, I find my true home. My love for thee transcends time and space, for thou art my everything, my light, and my eternal beacon.</p>
                 <p>Forever thine,</p>
-                <p>[Your Name]</p>
+                <p>Apen</p>
             `;
         } else {
             customText.innerHTML = ""; // Clear the custom text for other sounds
         }
 
-        if (sound.name === "4ᵗʰ Phone") {
+        if (sound.name === "4th Phone") {
             customImage.innerHTML = `
                 <img src="Audio/Pic/fotomuka.jpg" alt="Your Face" style="max-width: 100%; height: auto;">
             `;
