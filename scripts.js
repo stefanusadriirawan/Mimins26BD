@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         modal.style.display = "block";
         audioPlayer.play();
 
-        if (sound.name === "3ʳᵈ Phone") {
+        if (sound.name === "3rd Phone") {
             customText.innerHTML = `
                 <p>My Dearest [Her Name],</p>
                 <p>In the tapestry of my life, thou art the most radiant thread, filling my heart with boundless joy and love. Thy presence soothes my soul, like a gentle summer breeze, and thy laughter is the sweetest melody that echoes within me.</p>
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             customText.innerHTML = ""; // Clear the custom text for other sounds
         }
 
-        if (sound.name === "4ᵗʰ Phone") {
+        if (sound.name === "4th Phone") {
             customImage.innerHTML = `
                 <img src="Audio/Pic/fotomuka.jpg" alt="Your Face" style="max-width: 100%; height: auto;">
             `;
