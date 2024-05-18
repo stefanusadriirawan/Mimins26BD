@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
             modal.style.display = "none";
             audioPlayer.pause();
             customText.innerHTML = ""; // Clear the custom text
-            customImage.innerHTML = ""; // Clear the custom image
+            customImage.innerHTML = ""; // Clear the custom image yeyeyey
         }
     };
 
