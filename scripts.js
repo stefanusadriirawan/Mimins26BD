@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const sounds = [
         { name: "1st Phone", file: "Audio/Audio for mimin1 (enhanced-mastered).mp3" },
         { name: "2nd Phone", file: "Audio/Audio for mimin2 (enhanced-mastered).mp3" },
-        { name: "3rd Phone", file: "Audio/Persephone1.wav" },
-        { name: "4th Phone", file: "Audio/Persephone2.mp3" },
+        { name: "3rdz Phone", file: "Audio/Persephone1.wav" },
+        { name: "4thz Phone", file: "Audio/Persephone2.mp3" },
     ];
 
     const soundboard = document.querySelector(".soundboard");
