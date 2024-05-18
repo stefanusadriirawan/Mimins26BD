@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persephone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="outer-container">
+        <div class="container">
+            <header>
+                <h1>Min's Phone</h1>
+            </header>
+            <main>
+                <!-- Add the image here -->
+                <img class="responsive-image" src="Audio/Pic/2.jpeg" alt="Description of your image">
+                <!-- End of image -->
+                <div class="soundboard">
+                    <!-- Buttons will be dynamically generated here -->
+                </div>
+            </main>
+            <footer>
+                <p>Made with 💜 by Apen</p>
+                <div id="audio-toggle-container">
+                    <img id="audio-toggle" class="audio-toggle" src="Audio/Pic/no-sound.png" alt="Toggle Audio">
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <!-- Modal for music player -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <audio id="audio-player" controls>
+                Your browser does not support the audio element.
+            </audio>
+            <div id="custom-text" class="custom-text" style="margin-top: 20px;"></div>
+            <div id="custom-image" class="custom-image" style="margin-top: 20px;"></div>
+        </div>
+    </div>
+
+    <!-- Background music -->
+    <audio id="bg-music" src="Audio/bg.mp3" loop></audio>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
