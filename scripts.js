@@ -1,4 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Display the birthday modal on page load
+    const birthdayModal = document.getElementById("birthdayModal");
+    birthdayModal.style.display = "flex";
+
+    // Close modal when the close button is clicked
+    const closeModal = document.querySelector("#birthdayModal .close");
+    closeModal.onclick = () => {
+        birthdayModal.style.display = "none";
+    };
+
+    // Close modal when clicking outside of the modal content
+    window.onclick = (event) => {
+        if (event.target === birthdayModal) {
+            birthdayModal.style.display = "none";
+        }
+    };
+
+    // Your existing code for soundboard and other features
     const sounds = [
         { name: "1st Phone", file: "Audio/Audio for mimin1 (enhanced-mastered).mp3" },
         { name: "2nd Phone", file: "Audio/Audio for mimin2 (enhanced-mastered).mp3" },
@@ -12,29 +30,29 @@ document.addEventListener("DOMContentLoaded", () => {
     const audioPlayer = document.getElementById("audio-player");
     const customText = document.getElementById("custom-text");
     const customImage = document.getElementById("custom-image");
-    const closeModal = document.querySelector(".close");
+    const closeModalMain = document.querySelector("#modal .modal-close");
 
     sounds.forEach((sound) => {
         const button = document.createElement("button");
         button.textContent = sound.name;
-        button.style.fontFamily = 'Glacial Indifference, monospace'; // Add this line
+        button.style.fontFamily = 'Glacial Indifference, monospace';
         button.onclick = () => openModal(sound);
         soundboard.appendChild(button);
     });
 
-    closeModal.onclick = () => {
+    closeModalMain.onclick = () => {
         modal.style.display = "none";
         audioPlayer.pause();
-        customText.innerHTML = ""; // Clear the custom text
-        customImage.innerHTML = ""; // Clear the custom image
+        customText.innerHTML = "";
+        customImage.innerHTML = "";
     };
 
     window.onclick = (event) => {
-        if (event.target == modal) {
+        if (event.target === modal) {
             modal.style.display = "none";
             audioPlayer.pause();
-            customText.innerHTML = ""; // Clear the custom text
-            customImage.innerHTML = ""; // Clear the custom image yeyeyey
+            customText.innerHTML = "";
+            customImage.innerHTML = "";
         }
     };
 
@@ -53,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p>Apen</p>
             `;
         } else {
-            customText.innerHTML = ""; // Clear the custom text for other sounds
+            customText.innerHTML = "";
         }
 
         if (sound.name === "4th Phone") {
@@ -61,14 +79,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 <img src="Audio/Pic/fotomuka.jpg" alt="Your Face" style="max-width: 100%; height: auto;">
             `;
         } else {
-            customImage.innerHTML = ""; // Clear the custom image for other sounds
+            customImage.innerHTML = "";
         }
     }
 
     const bgMusic = document.getElementById("bg-music");
     const audioToggle = document.getElementById("audio-toggle");
 
-    // Set background music volume to 50%
     bgMusic.volume = 0.3;
 
     audioToggle.addEventListener("click", () => {

@@ -1,16 +1,50 @@
+/* Modal styles */
+#birthdayModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically and horizontally */
+}
 
-@import url('https://fonts.googleapis.com/css2?family=DejaVu Sans Mono:wght@400;700&display=swap');
-/* Import Glacial Indifference - ADJUST PATHS */
-@font-face {
-    font-family: 'Glacial Indifference';
-    src: url('Font/GlacialIndifference-Regular.woff2') format('woff2'),
-         url('Font/GlacialIndifference-Regular.woff') format('woff'); 
-    font-weight: normal;
-    font-style: normal;
-  }
+#birthdayModal .modal-content {
+    background-color: #faf0d7;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center; /* Center text horizontally */
+    animation: slideIn 0.5s;
+    position: relative; /* Required for absolute positioning of close button */
+}
 
+#birthdayModal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #550748;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
+#birthdayModal .close:hover,
+#birthdayModal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
+/* General styles */
 body {
     font-family: 'Glacial Indifference', monospace;
     background-color: #7c746c;
@@ -117,11 +151,14 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative; /* Required for absolute positioning of close button */
 }
 
 .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
     color: #550748;
-    align-self: flex-end; /* Align close button to the top-right corner */
     font-size: 28px;
     font-weight: bold;
 }
