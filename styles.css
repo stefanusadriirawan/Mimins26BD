@@ -1,19 +1,53 @@
+/* Modal styles */
+#birthdayModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically and horizontally */
+}
 
-@import url('https://fonts.googleapis.com/css2?family=DejaVu Sans Mono:wght@400;700&display=swap');
-/* Import Glacial Indifference - ADJUST PATHS */
-@font-face {
-    font-family: 'Glacial Indifference';
-    src: url('Font/GlacialIndifference-Regular.woff2') format('woff2'),
-         url('Font/GlacialIndifference-Regular.woff') format('woff'); 
-    font-weight: normal;
-    font-style: normal;
-  }
+#birthdayModal .modal-content {
+    background-color: #faf0d7;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 8px;
+    text-align: center; /* Center text horizontally */
+    animation: slideIn 0.5s;
+    position: relative; /* Required for absolute positioning of close button */
+}
 
+#birthdayModal .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: #550748;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
 
+#birthdayModal .close:hover,
+#birthdayModal .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
 
+/* General styles */
 body {
     font-family: 'Glacial Indifference', monospace;
-    background-color: #2b0133;
+    background-color: #7c746c;
     margin: 0;
     padding: 0;
     display: flex;
@@ -34,7 +68,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background: #fff;
+    background: #faf0d7;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     border-radius: 8px;
 }
@@ -55,8 +89,8 @@ header h1 {
     padding: 20px;
     font-size: 1em;
     font-family: 'Glacial Indifference', monospace; /* Add this line */
-    background-color: #550748;
-    color: white;
+    background-color: #37271d;
+    color: #fbf1d8;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -64,7 +98,7 @@ header h1 {
 }
 
 .soundboard button:hover {
-    background-color: #a486a7;
+    background-color: #d0974f;
 }
 
 footer {
@@ -105,7 +139,7 @@ footer p {
 }
 
 .modal-content {
-    background-color: #ffffff;
+    background-color: #fbf1d8;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -117,11 +151,14 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative; /* Required for absolute positioning of close button */
 }
 
 .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
     color: #550748;
-    align-self: flex-end; /* Align close button to the top-right corner */
     font-size: 28px;
     font-weight: bold;
 }
@@ -155,14 +192,14 @@ audio {
     width: 100%;
     max-width: 400px;
     margin-top: 20px;
-    background-color: #ffffff; /* Background color of the audio player */
-    color: #fff; /* Text color */
+    background-color: #fbf1d8; /* Background color of the audio player */
+    color: #fbf1d8; /* Text color */
     border-radius: 8px;
     padding: 10px;
 }
 
 audio::-webkit-media-controls-panel {
-    background-color: #be5cae; /* Background color for controls */
+    background-color: #d0974f; /* Background color for controls */
 }
 
 audio::-webkit-media-controls-play-button,
@@ -170,7 +207,7 @@ audio::-webkit-media-controls-volume-slider,
 audio::-webkit-media-controls-mute-button,
 audio::-webkit-media-controls-current-time-display,
 audio::-webkit-media-controls-time-remaining-display {
-    color: #fff; /* Control color */
+    color: #fbf1d8; /* Control color */
 }
 
 /* Hide background audio element */
